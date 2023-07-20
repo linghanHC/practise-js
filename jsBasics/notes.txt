@@ -1,0 +1,74 @@
+https://www.youtube.com/watch?v=SBmSRK3feww
+
+
+=========object=============
+object: An object groups multiple values together
+
+builtin ojects, eg JSON, localStorage
+
+      // convert object to json 
+JSON.stringify(object)
+    // convert json string to an object
+JSON.parse(jsonString);
+
+localStorage.setItem(key, value);   value can only be string
+localStorage.getItem(key);
+localStorage.removeItem(key);
+
+************
+
+shortcut to simplify checking for null values
+
+    let score = JSON.parse(localStorage.getItem('score'));
+    if (score===null) {
+        score = 0;  // set default value
+    }
+
+null is a falsy value  (falsy values are false 0 '' NaN undefined null), so above lines can be ==>
+
+    if (!score) {
+        ...
+    }
+
+default operator ||, so above lines can be ==>
+    // if left side is true, use left side, otherwise use right side
+    let score = JSON.parse(localStorage.getItem('score')) || 0;
+
+************
+
+null vs undefined
+null: intentionally want something to be empty
+
+************
+
+auto-boxing
+
+************
+objects are references
+
+************
+
+destructuring
+
+const message = object4.message;        is same as   
+const {message} = object4;
+
+const {message, price} = object4;
+
+
+shorthand property , shorthand method
+
+
+      const object4 = {
+        // message: message,
+        message,            
+
+        // method: function function1() {
+
+        // },
+        // method: function() {
+                // a function is another type of value of the object
+        // },
+        method() {
+            // ...
+        }
