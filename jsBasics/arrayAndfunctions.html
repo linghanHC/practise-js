@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+
+      greeting();
+      // this way of creating a function is called "hoisting", this way the function can be called before the creation
+      function greeting() {
+        console.log('hello')
+      }
+
+
+      // functions are values, it can be assigned to a variable, it cannot be used before the creation
+      const function1 = function () {
+        console.log('hi')
+      }
+
+      console.log(function1);
+      console.log(typeof function1);
+      function1();
+
+      //================================================================
+      const object4 = {
+        num: 2,            
+        sum(num2) {
+            console.log(Number(this.num) + Number(num2));   // convert to numbers before calculating
+        }
+      }
+
+      object4.sum(10);
+
+
+      //================================================================
+      // run a function in the future. asynchronously codes
+      setTimeout(function() {
+        console.log('timeouts');
+      }, 3000);   // run it after 3 seconds
+    
+      // intervalId = setInterval(function() {
+      //   console.log('interval');
+      // }, 3000);   // run it every 3 seconds
+
+      // clearInterval(intervalId)
+
+      //============================arrow functions====================================
+      ['a',
+        'b',
+        'c'].forEach(function(value, index){
+        console.log(value, index);
+      });
+
+      ['a',
+        'b',
+        'c'].forEach((value, index) =>{
+        console.log(value, index);
+      })
+
+      const oneLine = () => 2+3;
+      console.log(oneLine());
+
+      ['a',
+        'b',
+        'c'].forEach((value, index) =>{
+        splice.log(value, index);
+      })
+
+            // Closure
+      // if a function has access to a value, it will always have access to that value
+
+
+
+      const object2 = {
+        // arrow function
+        method:() => {
+
+        },
+       // anonymous function, recommended to be used in object
+        sum(num2) {
+            console.log(Number(this.num) + Number(num2));   // convert to numbers before calculating
+        }
+      }
+
+      //============================array====================================
+      // .map()
+      // 1. creates a new array
+      // 2. whatever returns will be added to the new array
+      const array2 = ['a',
+        'b',
+        'c'].map((value, index) => {
+        return value + index;   // concatenate 
+      });
+      console.log(array2);
+
+      // the following two lines are the same. when return is only one line, the curly brackets and return can be removed, it makes codes more compact 
+      console.log([1,1,3].map((value,index) => {
+        return value*2;
+      }));
+
+      console.log([1,1,3].map((value,index) => value*2));
+
+
+    </script>
+  </body>
+</html>

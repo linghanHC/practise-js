@@ -1,0 +1,16 @@
+https://www.youtube.com/watch?v=SBmSRK3feww
+
+
+==========Arrays and Loops============
+
+Array.isArray([1,2]);
+myArray.push(100);      add to the bottom of the array
+myArray.splice(0,1);    delete from index 0 one element
+
+
+for (let i = 0; i < 100; i++)   {
+
+}
+
+
+==========Advanced Functions============

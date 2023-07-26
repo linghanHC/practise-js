@@ -1,0 +1,17 @@
+https://www.youtube.com/watch?v=SBmSRK3feww
+
+
+=========DOM=============
+
+const buttonElement = document.querySelector('.js-button');
+
+// addEventListener has advantages over using the attribute , it can add multiple event listeners to the element
+buttonElement.addEventListener('click', ()=>{
+    console.log('clicked');
+});
+
+const eventListener1 = () => {
+    console.log('eventListener1 is clicked');
+};
+buttonElement.addEventListener('click', eventListener1);
+buttonElement.removeEventListener('click', eventListener1);
